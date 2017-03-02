@@ -21,7 +21,9 @@ setup(name='zirc',
       license='GNU',
       packages=find_packages(),
       install_requires=['six'],
-      extras_require=['pysocks'],
+      extras_require={
+          'pysocks': ['pysocks']
+      },
       include_package_data=True,
       zip_safe=False,
       classifiers=[
