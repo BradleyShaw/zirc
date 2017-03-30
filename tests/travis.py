@@ -8,7 +8,7 @@ class Bot(zirc.Client):
         self.start()
 
     @staticmethod
-    def on_welcome(irc, event):
+    def on_endofmotd(irc, event):
         irc.notice("#zirc", "Testing script successful")
         time.sleep(1)
         irc.send("QUIT :My work here is done")
